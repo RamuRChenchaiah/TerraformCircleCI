@@ -26,11 +26,4 @@ workflows:
               only: main
           requires:
             - terraform/plan
-      - terraform/destroy:
-          attach-workspace: true
-          context: terraform
-          filters:
-            branches:
-              only: main
-          requires:
-            - terraform/apply
+
